@@ -1,0 +1,18 @@
+.artist-profile {
+    width: 100%;
+}
+
+.artist-profile .left {
+    float: left;
+    width: 50%;
+}
+
+.artist-profile .left h1 {
+    font-size: 50px;
+    color: rgb(25, 0, 255);
+}
+
+.artist-profile .right {
+    float: right;
+    width: 50%;
+}

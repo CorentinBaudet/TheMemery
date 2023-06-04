@@ -1,0 +1,47 @@
+nav {
+    background-color: rgb(25, 0, 255);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+nav .container-navbar {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav .container-navbar .items-wrap {
+    width: 33.33%;
+    display: flex;
+}
+
+nav .container-navbar .items-wrap:first-child {
+    justify-content: flex-end;
+}
+
+nav .container-navbar .navbar-logo {
+    width: 33.33%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.2em 0;
+}
+
+nav .container-navbar .items-wrap .nav-item {
+    padding: 0.5em;
+}
+
+nav .container-navbar .items-wrap .nav-item .nav-link:hover {
+    background: #ff00ff
+}
+
+nav .container-navbar .items-wrap .nav-item.active .nav-link {
+    background-color: #ff00ff;
+}
+
+nav .container-navbar .items-wrap .nav-item + .nav-item { /* to have space between 2 nav-item */
+    margin-left: 1.5em;
+}
