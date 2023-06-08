@@ -10,15 +10,8 @@ const ArtistProfile = () => {
   const [firstArtistArtwork, setFirstArtistArtwork] = useState({});
   const location = useLocation();
   const artistToDisplay = location.state.artist;
-  const [currentUser, setCurrentUser] = useState({});
-  const [currentRole, setCurrentRole] = useState(3);
-  // const jwt = localStorage.getItem("jwt");
 
   async function setup() {
-    console.log(location.state.currentUser);
-    setCurrentUser(location.state.currentUser);
-    setCurrentRole(location.state.role);
-
     await Request("/artwork/artist/" + artistToDisplay.id, "GET").then(
       async (response) => {
         await response.json().then((artworks) => {
@@ -31,13 +24,12 @@ const ArtistProfile = () => {
   }
 
   useEffect(() => {
-
     setup();
   }, []);
 
   return (
     <>
-      <Navbar currentUser={currentUser} role={currentRole} />
+      <Navbar />
       <div className="artist-profile">
         <div className="left">
           <h1>{artistToDisplay.username}</h1>
@@ -65,13 +57,13 @@ const ArtistProfile = () => {
             {artistArtworks.map((artwork, index) => {
               const { title, price, technique, image } = artwork;
               return (
-                <Card item key={index} style={{ width: 200, display: "flex" }}>
+                // <Card item key={index} style={{ display: "flex", justifyContent: "center" }}>
 
-                  <img
-                    src={`data:image/png;base64, ${image}`}
-                    style={{ display: "flex", alignSelf: "center", maxWidth: 200 }}
-                  ></img>
-                </Card>
+                <img
+                  src={`data:image/png;base64, ${image}`}
+                  className="image"
+                ></img>
+                //  </Card> 
               );
             })}
           </div>
