@@ -68,5 +68,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
   }
 }
