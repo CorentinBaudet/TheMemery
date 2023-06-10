@@ -223,9 +223,9 @@ button {
     height: auto;
 }
 
-img {
+/* img {
     border: #E18335 solid 10px;
-}
+} */
 
 /* .container-info {
     background-color: rgb(25, 0, 255);
@@ -250,6 +250,10 @@ h1 {
 .card-individual {
     width: 33%;
     padding: 15px;
+}
+
+.card-individual img {
+    border: #000000 solid 5px !important;
 }
 
 .container-titles {

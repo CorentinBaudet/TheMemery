@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Request from "../../services/fetchService";
-import { Button, CardActionArea, CardActions, Chip, Stack, Typography, CardMedia, CardContent, Card } from "@mui/material";
+import {
+  Button,
+  CardActionArea,
+  CardActions,
+  Chip,
+  Stack,
+  Typography,
+  CardMedia,
+  CardContent,
+  Card,
+} from "@mui/material";
 
 //const Artworks = (props) => {
 const Artworks = () => {
@@ -37,7 +47,7 @@ const Artworks = () => {
       });
     }
     getListArtworks();
-    // localStorage.setItem("cartArtworks", JSON.stringify(cartArtworks));
+    localStorage.setItem("cartArtworks", JSON.stringify(cartArtworks));
   }, [cartArtworks]);
   console.log("after use effect");
 
@@ -61,7 +71,7 @@ const Artworks = () => {
     console.log(exist);
   }
   console.log("after onAdd");
-  console.log(cartArtworks);
+  console.log("debug", cartArtworks);
 
   return (
     <>

@@ -21,11 +21,12 @@ import APIRequest from "../services/fetchService";
 //const ShoppingCart = (props) => {
 const ShoppingCart = () => {
   const jwt = localStorage.getItem("jwt");
-  var cartArtwork = [];
-  if (localStorage.getItem("cartArtworks") != []) {
-    cartArtwork = JSON.parse(localStorage.getItem("cartArtworks"));
-  }
-  // const cartArtwork = JSON.parse(localStorage.getItem("cartArtworks"));
+  // var cartArtwork = [];
+  const localStorageValue = localStorage.getItem("cartArtworks");
+  // if (localStorage.getItem("cartArtworks") != []) {
+  //   cartArtwork = JSON.parse(localStorage.getItem("cartArtworks"));
+  // }
+  const cartArtwork = localStorageValue ? JSON.parse(localStorageValue) : [];
   console.log(cartArtwork);
   const location = useLocation();
   const [cartArtworks, setCartArtworks] = useState([]);
