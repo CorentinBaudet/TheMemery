@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Request from "../../services/fetchService";
+import APIRequest from "../../services/fetchService";
 import {
   Button,
   CardActionArea,
@@ -37,10 +37,11 @@ const Artworks = () => {
     setCurrentRole(location.state.role);
     //setCartArtworks(carritoParsed);
     async function getListArtworks() {
-      await Request("/artwork", "GET", jwt).then(async (response) => {
-        console.log("response from /artwork" + response);
+      await APIRequest("/artwork", "GET").then(async (response) => {
+        // console.log("response from /artwork" + response);
         await response.json().then((Artworks) => {
           if (Artworks.length > 0) {
+            console.log("voilà les oeuvres : " + Artworks);
             setArtworks([...Artworks]);
           }
         });
@@ -80,7 +81,7 @@ const Artworks = () => {
           {artworks.map((artwork, index) => {
             const { title, price, technique, image } = artwork;
             return (
-              <div className="card-individual">
+              <div key={index} className="card-individual">
                 <Card>
                   <CardActionArea>
                     <CardMedia

@@ -49,18 +49,20 @@ const ShoppingCart = () => {
       console.log("in addresses");
       await APIRequest("/address", "GET", jwt).then(async (response) => {
         console.log(response);
-        await response.json().then((Addresses) => {
-          Addresses.forEach((address) => {
-            if (
-              address.user.id === currentUser.id &&
-              currentUser.role === "ROLE_USER"
-            ) {
-              // setUpdatedAddress((previousState) => [...previousState, address]);
-              setUpdatedAddress([...address]);
-            }
-            setUpdatedAddress((previousState) => [...previousState, address]);
-            //setUpdatedAddress([...address]);
-          });
+        await response.json().then((addresses) => {
+          if (addresses.length > 0) {
+            addresses.forEach((address) => {
+              if (
+                address.user.id === currentUser.id &&
+                currentUser.role === "ROLE_USER"
+              ) {
+                // setUpdatedAddress((previousState) => [...previousState, address]);
+                setUpdatedAddress([...address]);
+              }
+              setUpdatedAddress((previousState) => [...previousState, address]);
+              //setUpdatedAddress([...address]);
+            });
+          }
         });
       });
     }
