@@ -52,8 +52,8 @@ const Home = () => {
     <>
       <Navbar currentUser={currentUser} role={currentRole} />
       <div className="home">
-        <p className="home-p">Life is a meme, take yours.</p>
-        <h3 className="home-h3">Upcoming events :</h3>
+        <p>Life is a meme, take yours.</p>
+        <h3>Upcoming events :</h3>
 
         {isLoading ? (
           <div className="placeholder-image">
@@ -61,8 +61,8 @@ const Home = () => {
           </div>
         ) : (events.length === 0 ? (
           <div className="placeholder-image">
-            <h2 className="home-h2">No upcoming events...</h2>
-            <h2 className="home-h2">Come back later 👅</h2>
+            <h2>No upcoming events...</h2>
+            <h2>Come back later 👅</h2>
           </div>
         ) : (
           <Slider {...sliderSettings} >
@@ -72,8 +72,8 @@ const Home = () => {
                   src={`data:image/png;base64, ${event.image}`}
                   alt=""
                 />
-                <h3 className="home-h3">{event.name}</h3>
-                <h4 className="home-h4">
+                <h3>{event.name}</h3>
+                <h4>
                   <i>{ConstructDate(event.date).toDateString()}</i>
                 </h4>
                 <h4>

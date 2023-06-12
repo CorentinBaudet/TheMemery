@@ -34,13 +34,11 @@
 .artist-profile .right .last-artwork .image {
     display: flex;
     justify-self: center;
-    /* margin-right: 25px; */
 }
 
 .artist-profile .right .last-artwork .text {
     display: flex;
     align-self: center;
-    /* margin-left: 25px; */
 }
 
 .artist-profile .right .last-artwork .text .title {

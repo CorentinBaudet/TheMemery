@@ -1,23 +1,33 @@
 import React, { useContext } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import { MdPerson } from "react-icons/md";
-import { BsShop } from "react-icons/bs";
 import { UserAuthContext } from "../App";
 
 const Navbar = () => {
-  const { currentUser, logInHandler, logOutHandler } =
+  const { currentUser, logOutHandler } =
     useContext(UserAuthContext);
 
   return (
     <nav className="navbar">
       <div className="container-navbar">
+        <div className="drop-down-menu">
+          {/* <input type="checkbox" id="btnControl" />
+          <label className="btn" for="btnControl">
+            <div className="dropdown-content">
+              <a href="#">artists</a>
+              <a href="#">boutique</a>
+            </div>
+          </label> */}
+          <button>👅</button>
+          <div className="dropdown-content">
+            <a href="#">artists</a>
+            <a href="#">boutique</a>
+          </div>
+        </div>
         <ul className="items-wrap">
           <li className="nav-item">
-            {/* <a className="nav-link">Artist</a> */}
             <CustomLink to="/artists">artists</CustomLink>
           </li>
           <li className="nav-item">
-            {/* <a className="nav-link">Boutique</a> */}
             <CustomLink to="/e-commerce" props={{ currentUser: currentUser }}>
               boutique
             </CustomLink>
@@ -28,7 +38,6 @@ const Navbar = () => {
         </div>
         <ul className="items-wrap">
           <li className="nav-item">
-            {/* <a className="nav-link">Profile</a> */}
             {currentUser.role !== 3 ? (
               <CustomLink to="/profile">
                 profile
@@ -39,8 +48,6 @@ const Navbar = () => {
             )}
           </li>
           <li className="nav-item">
-            {/* <a className="nav-link">Login</a> */}
-            {/* { isAuthenticated => isAuthenticated === "false" ? ( */}
             {currentUser.role !== 3 ? (
               <CustomLink onClick={logOutHandler} to="/">
                 log out
@@ -49,25 +56,9 @@ const Navbar = () => {
               <CustomLink to="/log-in">log in</CustomLink>
             )}
           </li>
-          {/* <CustomLink
-            to="/artists"
-            props={{ currentUser: currentUser, role: role }}
-          >
-            <MdPerson />
-          </CustomLink>
-        ) : (
-          <></>
-        )}
-        {/* <CustomLink to="/address">Addresses</CustomLink> */}
-          {/* {currentUser.role !== 3 ? (
-            <CustomLink to="/log-in">log out</CustomLink>
-          ) : (
-            <CustomLink to="/log-in">log in</CustomLink>
-          )} */}
         </ul>
       </div>
     </nav>
-    // </UserContext.Consumer>
   );
 };
 
