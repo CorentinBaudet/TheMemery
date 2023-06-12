@@ -77,25 +77,25 @@ const Artworks = () => {
   return (
     <>
       <div>
-        <div className="cards-grid">
+        <div class="cards-grid">
           {artworks.map((artwork, index) => {
             const { title, price, technique, image } = artwork;
             return (
-              <div key={index} className="card-individual">
+              <div key={index} class="card-individual">
                 <Card>
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      height="300"
+                      style={{ height: "100%", objectFit: "cover" }}
                       image={`data:image/png;base64, ${image}`}
                       alt="green iguana"
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        <h5>{title}</h5>
+                        {title}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        <h5>technique: {technique}</h5>
+                        technique: {technique}
                         <Stack sx={{ mt: 2 }} direction="row" spacing={1}>
                           <Chip label={price + " €"} />
                         </Stack>
@@ -107,6 +107,7 @@ const Artworks = () => {
                       size="small"
                       color="primary"
                       onClick={() => onAdd(artwork)}
+                      className="addToCartButton"
                     >
                       add to cart
                     </Button>
