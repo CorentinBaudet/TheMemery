@@ -46,6 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers(HttpMethod.GET, "/event").permitAll()
 				.antMatchers(HttpMethod.GET, "/event/*").permitAll()
 				.antMatchers(HttpMethod.GET, "/artwork").permitAll()
+				.antMatchers(HttpMethod.GET, "/e-commerce").permitAll()
 				.antMatchers(HttpMethod.GET, "/artwork/artist/*").permitAll()
 				.anyRequest().authenticated().and()
 				.csrf().disable();

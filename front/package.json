@@ -46,7 +46,7 @@
     "@svgr/webpack": "$@svgr/webpack"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --host <your-public-ip-address>",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

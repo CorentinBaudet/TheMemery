@@ -247,13 +247,39 @@ h1 {
     padding: 0 20px;
 }
 
-.card-individual {
+/* .card-individual {
     width: 33%;
     padding: 15px;
+} */
+
+.card-individual {
+    padding: 15px;
+  }
+  
+  @media (min-width: 768px) {
+    .card-individual {
+      width: 33%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .card-individual {
+      width: 100%;
+    }
 }
 
 .card-individual img {
-    border: #000000 solid 5px !important;
+    border: #000000 solid 3px !important;
+}
+
+.addToCartButton {
+    color: rgb(25, 0, 255) !important;
+}
+
+@media (max-width: 767px) {
+    .card-individual img {
+      border-width:2px !important;
+    }
 }
 
 .container-titles {
