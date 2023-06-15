@@ -9,20 +9,28 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container-navbar">
-        <div className="drop-down-menu">
-          {/* <input type="checkbox" id="btnControl" />
-          <label className="btn" for="btnControl">
-            <div className="dropdown-content">
-              <a href="#">artists</a>
-              <a href="#">boutique</a>
-            </div>
-          </label> */}
-          <button>👅</button>
-          <div className="dropdown-content">
-            <a href="#">artists</a>
-            <a href="#">boutique</a>
-          </div>
-        </div>
+
+        <label className="drop-down-menu">
+
+          <div className="dd-button">👅</div>
+
+          <input type="checkbox" class="dd-input" id="home-dd-input"></input>
+
+          <ul className="dd-content">
+            <li><CustomLink to="/artists">artists</CustomLink></li>
+            <li><CustomLink to="/e-commerce">boutique</CustomLink></li>
+            <li className="divider"></li>
+            {currentUser.role === 3 ? (
+              <li><CustomLink to="/log-in">log in</CustomLink></li>) : (
+              <>
+                <li><CustomLink to="/profile">profile</CustomLink></li>
+                <li><CustomLink onClick={logOutHandler} to="/">log out</CustomLink></li>
+              </>
+            )}
+          </ul>
+
+        </label>
+
         <ul className="items-wrap">
           <li className="nav-item">
             <CustomLink to="/artists">artists</CustomLink>
