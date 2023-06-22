@@ -155,11 +155,27 @@ button {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .container-register {
+      justify-content: center;
+      align-items: center;
+      padding: 125px 0.1px;
+    }
+  }
+
 .container-login {
     position: flex;
     padding: 80px 0;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .container-login {
+      justify-content: center;
+      align-items: center;
+      padding: 190px 0.1px;
+    }
+  }
 
 h1 {
     font-size: 150px;
@@ -176,7 +192,7 @@ h1 {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 100px;
+        font-size: 95px;
         text-align: center;
     }
 }
