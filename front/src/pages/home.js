@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar currentUser={currentUser} role={currentRole} />
+      <Navbar />
       <div className="home">
         <p>Life is a meme, take yours.</p>
         <h3>Upcoming events :</h3>

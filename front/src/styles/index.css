@@ -8,7 +8,6 @@
 
 html {
     font-family: 'Playfair Display', sans-serif;
-    /* font-size: 22px; */
     color: rgb(0, 0, 0);
 }
 
@@ -153,7 +152,6 @@ button {
 }
 
 .container-register {
-    /* padding: 200px 0; */
     text-align: center;
 }
 
@@ -196,17 +194,17 @@ h1 {
 
 .card-individual {
     padding: 15px;
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .card-individual {
-      width: 33%;
+        width: 33%;
     }
-  }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
     .card-individual {
-      width: 100%;
+        width: 100%;
     }
 }
 
@@ -220,7 +218,7 @@ h1 {
 
 @media (max-width: 767px) {
     .card-individual img {
-      border-width:2px !important;
+        border-width: 2px !important;
     }
 }
 

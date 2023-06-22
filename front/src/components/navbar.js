@@ -85,23 +85,4 @@ function CustomLink({ to, children, props, onClick }) {
   );
 }
 
-// function LogOutCustomLink({ to, children, props }) {
-//   const resolvedPath = useResolvedPath(to);
-//   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-//   const ctx = useContext(UserAuthContext);
-//   // ctx.onLogOut();
-//   // const fct = () => {
-//   //   ctx.onLogOut();
-//   // };
-//   // fct();
-
-//   return (
-//     <div className={`nav-item ${isActive ? "active" : ""}`}>
-//       <Link to={to} state={{ ...props }} className="nav-link">
-//         {children}
-//       </Link>
-//     </div>
-//   );
-// }
-
 export default Navbar;
