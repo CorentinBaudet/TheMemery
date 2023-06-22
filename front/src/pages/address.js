@@ -1,7 +1,7 @@
 import React, { useInsertionEffect, useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 // import { useLocalState } from "../util/useLocalStorage";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import style from "../styles/index.css";
 

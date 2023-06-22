@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 import { useNavigate } from "react-router-dom";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";

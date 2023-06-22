@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar";
-import Request from "../services/fetchService";
-import GetCurrentUser from "../services/getCurrentUser";
+import Request from "../services/fetch-service";
+import GetCurrentUser from "../services/get-current-user";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ConstructDate from "../util/constructDate";
+import ConstructDate from "../util/construct-date";
 import { Ellipsis } from 'react-css-spinners';
+import "../styles/home.css";
 
 const Home = () => {
   // TODO utiliser des place holder de react-bootstrap

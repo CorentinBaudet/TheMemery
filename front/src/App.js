@@ -7,15 +7,14 @@ import Address from "./pages/address";
 import { ProtectedRoute } from "./protected-route";
 import Register from "./pages/register";
 import ArtistProfile from "./pages/artist-profile";
-import AdminPanel from "./pages/adminPanel";
-import UpdateAndDeleteAddress from "./pages/updateAndDelete";
+import AdminPanel from "./pages/admin-panel";
+import UpdateAndDeleteAddress from "./pages/update-and-delete";
 import Artists from "./pages/artists";
 import Ecommerce from "./pages/ecommerce";
-import MyArtworks from "./pages/myArtworks";
-import ShoppingCart from "./pages/shoppingCart";
+import MyArtworks from "./pages/my-artworks";
+import ShoppingCart from "./pages/shopping-cart";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Navigation from "./pages/testPage";
-import { isJwtValid } from "./services/isAuthValid";
+import { isJwtValid } from "./services/is-auth-valid";
 import Cookies from "js-cookie";
 
 export const UserAuthContext = createContext();
@@ -73,7 +72,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
-        <Route path="/test" element={<Navigation />} />
         <Route
           path="/"
           element={

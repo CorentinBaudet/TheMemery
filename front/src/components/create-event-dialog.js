@@ -10,14 +10,14 @@ import {
   DialogTitle,
   Box,
 } from "@mui/material";
-import getAllEventType from "../util/allEventType";
+import getAllEventType from "../util/all-event-type";
 import { Button } from "react-bootstrap";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { blobToBase64String } from "blob-util";
 import Grid from "@mui/material/Unstable_Grid2";
-import APIRequest from "../services/fetchService";
-import ConstructDate from "../util/constructDate";
+import APIRequest from "../services/fetch-service";
+import ConstructDate from "../util/construct-date";
 
 const SimpleDialog = (props) => {
   const jwt = localStorage.getItem("jwt");

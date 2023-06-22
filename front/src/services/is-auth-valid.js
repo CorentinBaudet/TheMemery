@@ -1,4 +1,4 @@
-import APIRequest from "./fetchService";
+import APIRequest from "./fetch-service";
 import Cookies from "js-cookie";
 
 export async function isJwtValid() {

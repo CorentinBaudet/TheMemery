@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { UserAuthContext } from "../App";
+import "../styles/navbar.css";
 
 const Navbar = () => {
   const { currentUser, logOutHandler } =

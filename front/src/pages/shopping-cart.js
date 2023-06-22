@@ -17,7 +17,7 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 
 //const ShoppingCart = (props) => {
 const ShoppingCart = () => {

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import Info from "../components/info";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 import { useNavigate } from "react-router-dom";
 import { Snackbar, Alert } from "@mui/material";
 import { UserAuthContext } from "../App";
