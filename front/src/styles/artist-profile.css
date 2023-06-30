@@ -25,13 +25,15 @@
 .artist-profile .left h1 {
     position: fixed;
     top: calc(200px + 175px + 20px);
-    font-size: 46px;
+    font-size: 50px;
     color: rgb(25, 0, 255);
 }
 
 @media (max-width: 480px) {
     .artist-profile .left h1 {
-        font-size: 70px;
+        /* font-size: 70px; */
+        /* font-size: calc(50px + 0.100625vw); */
+        font-size: 15vw;
         color: rgb(25, 0, 255);
         position: static;
         top: 0;
