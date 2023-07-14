@@ -16,13 +16,13 @@ import {
   Alert,
 } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 import { Button } from "react-bootstrap";
 import "react-calendar/dist/Calendar.css";
-import getAllUserRole from "../util/allUserRole";
-import getAllEventType from "../util/allEventType";
-import SimpleDialog from "../components/createEventDialog";
-import ConstructDate from "../util/constructDate";
+import getAllUserRole from "../util/all-user-role";
+import getAllEventType from "../util/all-event-type";
+import SimpleDialog from "../components/create-event-dialog";
+import ConstructDate from "../util/construct-date";
 
 // TODO si on a le temps
 // ne pas modifier utilisateur si on change le nom quelque part et on clique sur le bouton update d'un autre
@@ -167,7 +167,7 @@ const AdminPanel = () => {
             open={isFailureSnackbarVisible}
             autoHideDuration={6000}
             onClose={handleCloseSnackbar}
-            // action={action}
+          // action={action}
           >
             <Alert severity="error" sx={{ width: "100%" }}>
               Username is empty
@@ -177,7 +177,7 @@ const AdminPanel = () => {
             open={isSuccessSnackbarVisible}
             autoHideDuration={6000}
             onClose={handleCloseSnackbar}
-            // action={action}
+          // action={action}
           >
             <Alert severity="success" sx={{ width: "100%" }}>
               User updated

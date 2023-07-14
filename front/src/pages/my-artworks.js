@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import Navbar from "../components/navbar";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 import { useLocation } from "react-router-dom";
 import {
   Grid,
@@ -14,7 +14,7 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import getAllArtworkTechnique from "../util/allArtworkTechnique";
+import getAllArtworkTechnique from "../util/all-artwork-technique";
 import { blobToBase64String } from "blob-util";
 import Cookies from "js-cookie";
 import { UserAuthContext } from "../App";
@@ -177,7 +177,7 @@ const MyArtworks = () => {
             open={isSnackbarVisible}
             autoHideDuration={6000}
             onClose={handleCloseSnackbar}
-            // action={action}
+          // action={action}
           >
             <Alert severity="error" sx={{ width: "100%" }}>
               Missing Field(s)

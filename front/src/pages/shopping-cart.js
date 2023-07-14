@@ -4,6 +4,7 @@ import { useLocation, Link } from "react-router-dom";
 import Ecommerce from "./ecommerce.js";
 import Artworks from "../components/artworks/artworks";
 import { NavItem } from "react-bootstrap";
+import "../styles/shopping-cart.css";
 //import onAdd from "./ecommerce.js";
 //import onRemove from "../components/artworks/artwork.js";
 import {
@@ -16,7 +17,7 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 
 //const ShoppingCart = (props) => {
 const ShoppingCart = () => {

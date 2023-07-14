@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import Navbar from "../components/navbar";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 import { useNavigate } from "react-router-dom";
 import { Snackbar, Alert } from "@mui/material";
 import { UserAuthContext } from "../App";
@@ -76,7 +76,7 @@ const Profile = () => {
             open={isSnackbarVisible}
             autoHideDuration={6000}
             onClose={handleCloseSnackbar}
-            // action={action}
+          // action={action}
           >
             <Alert severity="error" sx={{ width: "100%" }}>
               Username is empty

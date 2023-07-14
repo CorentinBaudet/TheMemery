@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { UserAuthContext } from "../App";
+import "../styles/navbar.css";
 
 const Navbar = () => {
   const { currentUser, logOutHandler } =
@@ -83,24 +84,5 @@ function CustomLink({ to, children, props, onClick }) {
     </div>
   );
 }
-
-// function LogOutCustomLink({ to, children, props }) {
-//   const resolvedPath = useResolvedPath(to);
-//   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-//   const ctx = useContext(UserAuthContext);
-//   // ctx.onLogOut();
-//   // const fct = () => {
-//   //   ctx.onLogOut();
-//   // };
-//   // fct();
-
-//   return (
-//     <div className={`nav-item ${isActive ? "active" : ""}`}>
-//       <Link to={to} state={{ ...props }} className="nav-link">
-//         {children}
-//       </Link>
-//     </div>
-//   );
-// }
 
 export default Navbar;

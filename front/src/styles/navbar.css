@@ -17,6 +17,7 @@ nav .container-navbar {
 nav .container-navbar .drop-down-menu {
     position: absolute;
     display: none;
+    z-index: 1;
 }
 
 nav .container-navbar .items-wrap {

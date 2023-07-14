@@ -1,4 +1,4 @@
-import APIRequest from "../services/fetchService";
+import APIRequest from "./fetch-service";
 
 async function GetCurrentUser() {
   var currentUser = null;

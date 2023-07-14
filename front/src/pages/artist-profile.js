@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/navbar";
-import Request from "../services/fetchService";
-import { Grid, Card, Stack } from "@mui/material";
-import getAllArtworkTechnique from "../util/allArtworkTechnique";
+import Request from "../services/fetch-service";
+import getAllArtworkTechnique from "../util/all-artwork-technique";
+import "../styles/artist-profile.css";
 
 const ArtistProfile = () => {
   const [artistArtworks, setArtistArtworks] = useState([]);
@@ -34,12 +34,9 @@ const ArtistProfile = () => {
         <div className="left">
           <h1>{artistToDisplay.username}</h1>
         </div>
-        <div className="right">
-          {/* <Grid container spacing={4}> */}
 
+        <div className="right">
           <div className="last-artwork">
-            {/* <Card style={{ width: 330, height: 440 }}>
-                  <Stack spacing={2} style={{ margin: 15 }}> */}
             <img item
               className="image"
               src={`data:image/png;base64, ${firstArtistArtwork.image}`}
@@ -49,25 +46,19 @@ const ArtistProfile = () => {
               <b className="title">{firstArtistArtwork.title}</b>
               <label className="technique">{getAllArtworkTechnique(firstArtistArtwork.technique)}</label>
             </div>
-            {/* </Stack>
-            </Card> */}
           </div>
 
           <div className="grid-container">
             {artistArtworks.map((artwork, index) => {
               const { title, price, technique, image } = artwork;
               return (
-                // <Card item key={index} style={{ display: "flex", justifyContent: "center" }}>
-
                 <img
                   src={`data:image/png;base64, ${image}`}
                   className="image"
                 ></img>
-                //  </Card> 
               );
             })}
           </div>
-          {/* </Grid> */}
         </div>
       </div>
     </>

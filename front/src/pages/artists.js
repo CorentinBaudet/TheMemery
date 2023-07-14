@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar";
-import APIRequest from "../services/fetchService";
+import APIRequest from "../services/fetch-service";
 import { useNavigate } from "react-router-dom";
-import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import Grid from "@mui/material/Unstable_Grid2";
 import styled from "styled-components";
-import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import "../styles/artists.css";
 
 const Artists = () => {
   const [artists, setArtists] = useState([]);
@@ -41,6 +39,7 @@ const Artists = () => {
   async function setup() {
     await APIRequest("/user", "GET").then(async (response) => {
       await response.json().then((allUsers) => {
+        setArtists([]);
         allUsers.forEach((user) => {
           if (user.role === "ROLE_ARTIST") {
             setArtists((previousState) => [...previousState, user]);
@@ -57,17 +56,17 @@ const Artists = () => {
   return (
     <>
       <Navbar />
-      <Grid container style={{ marginTop: 50 }}>
-        <Grid xs={5}>
-          <List style={{ marginLeft: 100 }}>
+      <div className="artists">
+        <div className="left">
+          <div className="grid-artists">
             {artists.map((artist, index) => {
               const { id, username } = artist;
               return (
                 <ListItem disablePadding key={index}>
                   <MySpan>
                     <ListItemText
-                      style={{ cursor: "pointer" }}
-                      primary={username}
+                      style={{ cursor: "pointer", fontFamily: 'Playfair Display, sans-serif' }}
+                      primary={username.toUpperCase()}
                       onClick={() => {
                         toArtistProfile(artist);
                       }}
@@ -89,23 +88,21 @@ const Artists = () => {
                 </ListItem>
               );
             })}
-          </List>
-        </Grid>
-        <Grid xs={7} justifyContent="center">
-          {/* sx={{ width: 500, height: 450 }} rowHeight={164} parameters for ImageList */}
-          <ImageList cols={3} style={{ marginRight: 100 }}>
+          </div>
+        </div>
+        <div className="right">
+          <div className="grid-artworks">
             {img.map((artwork, index) => (
               <ImageListItem key={index}>
                 <img
                   src={`data:image/png;base64, ${artwork.image}`}
-                  // srcSet={`data:image/png;base64, ${artwork.image}`}
                   loading="eager"
                 />
               </ImageListItem>
             ))}
-          </ImageList>
-        </Grid>
-      </Grid>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

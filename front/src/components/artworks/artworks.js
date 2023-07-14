@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import APIRequest from "../../services/fetchService";
+import APIRequest from "../../services/fetch-service";
 import {
   Button,
   CardActionArea,
